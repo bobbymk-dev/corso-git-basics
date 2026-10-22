@@ -1,5 +1,5 @@
 from app.task_service import aggiungi_task, completa_task
-from app.task_report import riepilogo
+from app.task_report import riepilogo, formatta_riga_report
 
 #Questo è il main
 def main() -> None:
@@ -11,6 +11,7 @@ def main() -> None:
     for task in tasks:
         stato = "OK" if task.completato else "DA FARE"
         print(f"[{stato}] #{task.id}: {task.titolo} ({task.assegnatario})")
+        print(formatta_riga_report(task))
 
 
 if __name__ == "__main__":
