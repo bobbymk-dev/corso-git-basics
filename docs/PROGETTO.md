@@ -1,4 +1,5 @@
 # Task Manager — Specifiche del laboratorio
+# in fase di sviluppo
 
 ## Funzioni attuali
 - Creazione task con titolo e assegnatario
