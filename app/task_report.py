@@ -16,3 +16,9 @@ def riepilogo_uniforme(tasks: list[Task]) -> str:
     completati = sum(task.completato for task in tasks)
     aperti = totali - completati
     return f"Totale Task: {totali} | Completati: {completati} | Aperti: {aperti}"
+
+#helper per formattare una riga del report, mantenendo l'output precedente. Anna dovrà riutilizzarla in una feature dipendente.
+def formatta_riga_report(task: Task) -> str:
+    """Restituisce una stringa formattata per una singola riga del report."""
+    stato = "Completato" if task.completato else "Aperto"
+    return f"ID: {task.id} | Titolo: {task.titolo} | Stato: {stato}"
